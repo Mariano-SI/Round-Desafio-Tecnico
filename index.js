@@ -1,3 +1,4 @@
+//functions
 let byCity = require("./myFunctions/getByCityName");
 let ByLatAndLong = require("./myFunctions/getByLatAndLong");
 
