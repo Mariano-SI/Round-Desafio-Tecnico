@@ -6,7 +6,9 @@ const express = require("express");
 const app = express();
 
 app.get("/", async function (req, res) {
-  let cidade = req.query["cidade"];
+  let cidade = req.query["cidade"].toLowerCase();
+  //OpenWeather api only accepts lowercase letters
+
   //URL example: http://localhost:3000/?cidade=(nome da cidade)
   try {
     let resposta = await byCity(cidade);

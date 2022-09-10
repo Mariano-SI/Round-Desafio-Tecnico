@@ -8,5 +8,5 @@ let getByLatAndLong = async function (lat, long){
     console.log(data);
     return data;
 }
-getByLatAndLong(-18.2381,-43.611)
+//getByLatAndLong(-18.2381,-43.611) teste com diamatina
 module.exports = getByLatAndLong;

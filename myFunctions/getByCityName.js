@@ -2,6 +2,8 @@ const axios = require('axios');
 
 
  let getByCityName = async function (city){
+    
+    
     let apiKey = "001f46a7087e786053602d3dbe579c9b";
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
     const response = await axios.get(url);
@@ -14,7 +16,7 @@ const axios = require('axios');
 } 
 
 
-getByCityName('gouveia')
+
 module.exports = getByCityName;
 
 
