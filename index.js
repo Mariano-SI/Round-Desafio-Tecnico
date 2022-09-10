@@ -5,11 +5,12 @@ const express = require("express");
 
 const app = express();
 
+//City name route
 app.get("/", async function (req, res) {
   let cidade = req.query["cidade"].toLowerCase();
   //OpenWeather api only accepts lowercase letters
 
-  //URL example: http://localhost:3000/?cidade=(nome da cidade)
+  //URL example: http://localhost:3000/?cidade=(city name)
   try {
     let resposta = await byCity(cidade);
     res.send(resposta);
@@ -18,7 +19,7 @@ app.get("/", async function (req, res) {
   }
 });
 
-//corrigir rota, colocar parametros juntos
+//Lat and long route
 app.get("/geolocation", async function (req, res) {
   //URL example: http://localhost:3000/geolocation?lat=18&long=43
   let lat = req.query["lat"];
