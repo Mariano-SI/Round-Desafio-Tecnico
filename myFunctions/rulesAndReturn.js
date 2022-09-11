@@ -10,7 +10,7 @@ let rulesAndReturn = function (obj) {
     alerta = "Umidade baixa com risco de ensolação";
   } else if (temp < 10) {
     alerta = "Frio intenso";
-  } else if (humidity < 30 && temp < 30) {
+  } else if (humidity <= 30 && temp < 30) {
     alerta = "Umidade baixa";
   } else if (temp > 30) {
     alerta = "Risco de ensolação";
@@ -22,6 +22,7 @@ let rulesAndReturn = function (obj) {
     umidade: humidity,
     status: alerta,
   };
+  
   return respostaFinal;
 };
 

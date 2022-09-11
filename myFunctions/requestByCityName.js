@@ -1,7 +1,7 @@
 const axios = require('axios');
 let rules = require("./rulesAndReturn");
 
- let getByCityName = async function (city){
+ let requestByCityName = async function (city){
     
     
     let apiKey = "001f46a7087e786053602d3dbe579c9b";
@@ -15,8 +15,6 @@ let rules = require("./rulesAndReturn");
 
 } 
 
-
-
-module.exports = getByCityName;
+module.exports = requestByCityName;
 
 
