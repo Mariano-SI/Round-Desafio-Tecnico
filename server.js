@@ -7,11 +7,11 @@ const express = require("express");
 const app = express();
 
 //Search by city name
-app.get("/", async function (req, res) {
-  let cidade = req.query["cidade"].toLowerCase();
-  //URL example: http://localhost:3000/?cidade=(city name)
+app.get("/cityname", async function (req, res) {
+  let name = req.query["name"].toLowerCase();
+  //URL example: http://localhost:3000/cityname?name=(city name)
   try {
-    let resposta = await byCity(cidade);
+    let resposta = await byCity(name);
     res.send(resposta);
   } catch (error) {
     res.send({error: 'Cidade não encontrada, verifique sua busca'});

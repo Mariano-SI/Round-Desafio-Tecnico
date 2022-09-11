@@ -3,21 +3,21 @@ const app = require('./server');
 
 it('Deve testar se a rota devolve os retornar os campos que necessito caso o query param tenha letras maiusculas', async ()=>{
     const cidade = "Diamantina"
-    const res = await request(app).get(`/?cidade=${cidade}`)
+    const res = await request(app).get(`/cityname?name=${cidade}`)
     expect(res.body).toHaveProperty('cidade', 'temperatura', 'umidade', 'status')
     console.log(res.body)
 })
 
 it('Deve testar se a rota retorna um erro caso os parametros nao sejam passados', async ()=>{
     const cidade = ""
-    const res = await request(app).get(`/?cidade=${cidade}`)
+    const res = await request(app).get(`/cityname?name=${cidade}`)
     console.log(res.body)
     expect(res.body).toHaveProperty('error')
 })
 
 it('Deve apontar erro caso a cidade não exista', async ()=>{
     const cidade = "asfasfas"
-    const res = await request(app).get(`/?cidade=${cidade}`)
+    const res = await request(app).get(`/cityname?name=${cidade}`)
     console.log(res.body)
     expect(res.body).toHaveProperty('error')
 })

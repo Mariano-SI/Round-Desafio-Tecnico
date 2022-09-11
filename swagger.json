@@ -1,0 +1,121 @@
+{
+    "openapi": "3.0.0",
+    "info":{
+        "title": "Api de consulta climática",
+        "description": "Documentação de API para consulta climática em tempo real desenvolvida para o teste prático da DTI Digital",
+        "contact":{
+            "name": "Mariano Carlos Silva Mariano.silva@ufvjm.edu.br"
+            
+        }
+        
+    },
+    "servers":[
+        {
+            "url":"http://localhost:3000",
+            "description":"local server"
+        }],
+    "version":"1.0.0",
+    "basePath":"/",
+    "paths":{
+        "/cityname":{
+            "get":{
+                "description":"Informa o nome da cidade pesquisada, sua temperatura, sua umidade atual além de status de alerta",
+                "parameters":[{
+                    "in":"query",
+                    "name":"name",
+                    "type":"string",
+                    "description":"Nome da cidade na qual deseja-se saber informações climáticas",
+                    "required":true
+                }],
+                "responses":{
+                    "200":{
+                        "description":"Sucesso",
+                        "content":{
+                            "aplication/json":{
+                                "schema":{
+                                    "type": "object",
+                                    "properties":{
+                                        "cidade":{
+                                            "type":"string",
+                                            "description":"Cidade da busca",
+                                            "example":"Diamantina"
+                                        },
+                                        "temperatura":{
+                                            "type":"number",
+                                            "description":"Temperatura atual na cidade buscada",
+                                            "example":30
+                                        },
+                                        "umidade":{
+                                            "type":"number",
+                                            "description":"Umidade atual na cidade buscada",
+                                            "example":65
+                                        },
+                                        "status":{
+                                            "type":"string",
+                                            "description":"Alerta emitido de acordo com as condições climáticas do local",
+                                            "example":"Nenhum risco eminente"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/geolocation":{
+            "get":{
+                "description":"Informa o nome da cidade pesquisada, sua temperatura, sua umidade atual além de status de alerta",
+                "parameters":[{
+                    "in":"query",
+                    "name":"lat",
+                    "type":"string",
+                    "description":"Latitude do local no qual deseja-se saber informações climáticas",
+                    "required":true
+                },
+                {
+                    "in":"query",
+                    "name":"long",
+                    "type":"string",
+                    "description":"Longitude do local no qual deseja-se saber informações climáticas",
+                    "required":true
+                }],
+                "responses":{
+                    "200":{
+                        "description":"Sucesso",
+                        "content":{
+                            "aplication/json":{
+                                "schema":{
+                                    "type": "object",
+                                    "properties":{
+                                        "cidade":{
+                                            "type":"string",
+                                            "description":"Cidade da busca",
+                                            "example":"Brasília"
+                                        },
+                                        "temperatura":{
+                                            "type":"number",
+                                            "description":"Temperatura atual na cidade buscada",
+                                            "example":32
+                                        },
+                                        "umidade":{
+                                            "type":"number",
+                                            "description":"Umidade atual na cidade buscada",
+                                            "example":20
+                                        },
+                                        "status":{
+                                            "type":"string",
+                                            "description":"Alerta emitido de acordo com as condições climáticas do local",
+                                            "example":"Umidade baixa com risco de ensolação"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            
+            }
+        }
+    }
+}
