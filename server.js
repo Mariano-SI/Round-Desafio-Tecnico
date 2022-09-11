@@ -14,7 +14,7 @@ app.get("/", async function (req, res) {
     let resposta = await byCity(cidade);
     res.send(resposta);
   } catch (error) {
-    res.send("<h1>Cidade não encontrada, verifique sua busca</h1>");
+    res.send({error: 'Cidade não encontrada, verifique sua busca'});
   }
 });
 
@@ -27,7 +27,7 @@ app.get("/geolocation", async function (req, res) {
     let resposta = await byLatAndLong(lat, long);
     res.send(resposta);
   } catch (error) {
-    res.send("<h1>Cidade não encontrada, verifique sua busca</h1>");
+    res.send({error: 'Cidade não encontrada, verifique sua busca'});
   }
 });
 

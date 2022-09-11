@@ -4,7 +4,8 @@
   "description": "Desafio tecnico para vaga de estagio na DTI Digital",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test":"jest"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,9 @@
     "axios": "^0.27.2",
     "express": "^4.18.1",
     "node-fetch": "^3.2.10"
+  },
+  "devDependencies": {
+    "jest": "^29.0.3",
+    "supertest": "^6.2.4"
   }
 }
