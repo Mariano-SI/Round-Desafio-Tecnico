@@ -6,21 +6,21 @@ let byLatAndLong = require("./myFunctions/requestByLatAndLong");
 const express = require("express");
 const app = express();
 
-//Search by city name
+//Search by city name. URL example: http://localhost:3000/cityname?name=(city name)
 app.get("/cityname", async function (req, res) {
-  let name = req.query["name"].toLowerCase();
-  //URL example: http://localhost:3000/cityname?name=(city name)
+  let name = req.query["name"].toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ""); 
+  //OpenWeather API only accepts lowercase letters and without accents.
   try {
     let resposta = await byCity(name);
     res.send(resposta);
   } catch (error) {
+    
     res.send({error: 'Cidade não encontrada, verifique sua busca'});
   }
 });
 
-//Search by lat and long
+//Search by lat and long. URL example: http://localhost:3000/geolocation?lat=-18&long=-43
 app.get("/geolocation", async function (req, res) {
-  //URL example: http://localhost:3000/geolocation?lat=18&long=43
   let lat = req.query["lat"];
   let long = req.query["long"];
   try {

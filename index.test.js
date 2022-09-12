@@ -1,8 +1,8 @@
 const request = require('supertest');
 const app = require('./server');
 
-it('Deve testar se a rota devolve os retornar os campos que necessito caso o query param tenha letras maiusculas', async ()=>{
-    const cidade = "Diamantina"
+it('Deve testar se a rota retorna os campos que necessito caso o query param tenha letras maiusculas e acentuadas', async ()=>{
+    const cidade = "FloRianóPoLis"
     const res = await request(app).get(`/cityname?name=${cidade}`)
     expect(res.body).toHaveProperty('cidade', 'temperatura', 'umidade', 'status')
     console.log(res.body)
