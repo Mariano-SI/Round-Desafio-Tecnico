@@ -4,8 +4,8 @@
   "description": "Desafio tecnico para vaga de estagio na DTI Digital",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test":"jest"
+    "start": "nodemon index.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   "dependencies": {
     "axios": "^0.27.2",
     "express": "^4.18.1",
+    "nodemon": "^2.0.19",
     "swagger-ui-express": "^4.5.0"
   },
   "devDependencies": {

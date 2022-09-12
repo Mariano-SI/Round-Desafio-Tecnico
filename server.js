@@ -2,9 +2,21 @@
 let byCity = require("./myFunctions/requestByCityName");
 let byLatAndLong = require("./myFunctions/requestByLatAndLong");
 
+//for documentation
+const swaggerUI = require('swagger-ui-express')
+const swaggerDocument = require('./swagger.json')
+
 //server
 const express = require("express");
 const app = express();
+
+
+//routes
+app.get('/', (req, res)=>{
+  res.send("Hello, World")
+})
+
+
 
 //Search by city name. URL example: http://localhost:3000/cityname?name=(city name)
 app.get("/cityname", async function (req, res) {
@@ -30,5 +42,8 @@ app.get("/geolocation", async function (req, res) {
     res.send({error: 'Cidade não encontrada, verifique sua busca'});
   }
 });
+//online documentation
+
+app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument))
 
 module.exports = app;

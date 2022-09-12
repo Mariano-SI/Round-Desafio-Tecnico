@@ -1,10 +1,12 @@
+//routes
 const app = require('./server');
 
-const swaggerUI = require('swagger-ui-express')
-const swaggerDocument = require('./swagger.json')
 
-app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument))
 
-app.listen(3000, function () {
+const PORT = 3000;
+const HOST = '0.0.0.0'
+
+//server
+app.listen(PORT, HOST, function () {
   console.log("Servidor rodando na porta 3000");
 });
