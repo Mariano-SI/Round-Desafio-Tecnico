@@ -2,19 +2,18 @@
     "openapi": "3.0.0",
     "info":{
         "title": "Api de consulta climática",
-        "description": "Documentação de API para consulta climática em tempo real desenvolvida para o teste prático da DTI Digital",
+        "description": "Documentação de API para consulta climática em tempo real com emissão de alerta desenvolvida para o teste prático da DTI Digital",
         "contact":{
-            "name": "Mariano Carlos Silva Mariano.silva@ufvjm.edu.br"
-            
-        }
-        
+            "name":"Mariano Carlos Silva",
+            "email":"Mariano.silva@ufvjm.edu.br"
+        } ,
+        "version":"1.0.0"
     },
     "servers":[
         {
             "url":"http://localhost:3000",
             "description":"local server"
         }],
-    "version":"1.0.0",
     "basePath":"/",
     "paths":{
         "/cityname":{
