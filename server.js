@@ -10,23 +10,16 @@ const swaggerDocument = require('./swagger.json')
 const express = require("express");
 const app = express();
 
-
 //routes
-app.get('/', (req, res)=>{
-  res.send("Hello, World")
-})
-
-
 
 //Search by city name. URL example: http://localhost:3000/cityname?name=(city name)
 app.get("/cityname", async function (req, res) {
   let name = req.query["name"].toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ""); 
   //OpenWeather API only accepts lowercase letters and without accents.
   try {
-    let resposta = await byCity(name);
-    res.send(resposta);
+    let response = await byCity(name);
+    res.send(response);
   } catch (error) {
-    
     res.send({error: 'Cidade não encontrada, verifique sua busca'});
   }
 });
@@ -36,14 +29,14 @@ app.get("/geolocation", async function (req, res) {
   let lat = req.query["lat"];
   let long = req.query["long"];
   try {
-    let resposta = await byLatAndLong(lat, long);
-    res.send(resposta);
+    let response = await byLatAndLong(lat, long);
+    res.send(response);
   } catch (error) {
     res.send({error: 'Cidade não encontrada, verifique sua busca'});
   }
 });
-//online documentation
 
+//online documentation
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument))
 
 module.exports = app;

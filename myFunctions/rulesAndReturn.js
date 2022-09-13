@@ -1,29 +1,29 @@
 let rulesAndReturn = function (obj) {
-  let alerta = "";
+  let alert = "";
   const temp = obj.main.temp;
   const humidity = obj.main.humidity;
 
   //Regras de Negócio
   if (temp >= 10 && temp <= 30 && humidity > 30) {
-    alerta = "Nenhum risco eminente";
+    alert = "Nenhum risco eminente";
   } else if (humidity < 30 && temp > 30) {
-    alerta = "Umidade baixa com risco de ensolação";
+    alert = "Umidade baixa com risco de ensolação";
   } else if (temp < 10) {
-    alerta = "Frio intenso";
+    alert = "Frio intenso";
   } else if (humidity <= 30 && temp < 30) {
-    alerta = "Umidade baixa";
+    alert = "Umidade baixa";
   } else if (temp > 30) {
-    alerta = "Risco de ensolação";
+    alert = "Risco de ensolação";
   }
 
-  let respostaFinal = {
+  let weatherInfo = {
     cidade: obj.name,
     temperatura: temp,
     umidade: humidity,
-    status: alerta,
+    status: alert,
   };
   
-  return respostaFinal;
+  return weatherInfo;
 };
 
 module.exports = rulesAndReturn;
