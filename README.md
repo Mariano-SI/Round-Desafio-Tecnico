@@ -23,7 +23,7 @@ além de um status de alerta que varia de acordo com as condições climáticas 
 <img src="https://github.com/Mariano-SI/teste-pratico/blob/main/assets/forReadMe/ApiDoc.png"</img>
 <h1>Exemplos de funcionamento</h1>
 <p>Pesquisa por nome do local</p>
-<img src="https://github.com/Mariano-SI/teste-pratico/blob/main/assets/forReadMe/func1.png"></img>
+<img src="https://github.com/Mariano-SI/teste-pratico/blob/main/assets/forReadMe/func2.png"></img>
 <img src="https://github.com/Mariano-SI/teste-pratico/blob/main/assets/forReadMe/func22.png"></img>
 <p>Pesquisa por latitude e longitude</p>
 <img src="https://github.com/Mariano-SI/teste-pratico/blob/main/assets/forReadMe/func3.png"></img>
