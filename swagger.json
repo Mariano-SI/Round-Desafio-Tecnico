@@ -18,7 +18,7 @@
     "paths":{
         "/cityname":{
             "get":{
-                "description":"Informa o nome da cidade pesquisada, sua temperatura, sua umidade atual além de status de alerta",
+                "description":"Essa rota é responável pelas consultas que utilizam o nome da cidade como parametro.",
                 "parameters":[{
                     "in":"query",
                     "name":"name",
@@ -64,7 +64,7 @@
         },
         "/geolocation":{
             "get":{
-                "description":"Informa o nome da cidade pesquisada, sua temperatura, sua umidade atual além de status de alerta",
+                "description":"Essa rota é responável pelas consultas que utilizam a combinação de latitude e longitude do local como parametro.",
                 "parameters":[{
                     "in":"query",
                     "name":"lat",
