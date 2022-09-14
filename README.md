@@ -12,21 +12,21 @@ além de um status de alerta que varia de acordo com as condições climáticas 
 <h3>Rota de busca por nome da cidade</h3>
 <p>/cityname?name=(city name)</p>
 <p>EXEMPLO:</p>
-<img src="https://github.com/Mariano-SI/teste-pratico/blob/main/assets/forReadMe/ByCity.png"></img>
+<img src="https://github.com/Mariano-SI/teste/blob/main/forReadMe/ByCity.png"></img>
 <h3>Rota de busca por combianção entre latitude e longitude</h3>
 <p>/geolocation?lat=(valor da latitude)&long=(valor da longitude)</p>
 <p>EXEMPLO:</p>
-<img src="https://github.com/Mariano-SI/teste-pratico/blob/main/assets/forReadMe/ByLatLong.png"</img>
+<img src="https://github.com/Mariano-SI/teste/blob/main/forReadMe/ByLatLong.png"</img>
 <h3>Rota para acessar a documentação da api</h3>
 <p>/api-docs</p>
 <p>EXEMPLO:</p>
-<img src="https://github.com/Mariano-SI/teste-pratico/blob/main/assets/forReadMe/ApiDoc.png"</img>
+<img src="https://github.com/Mariano-SI/teste/blob/main/forReadMe/ApiDoc.png"</img>
 <h1>Exemplos de funcionamento</h1>
 <p>Pesquisa por nome do local</p>
-<img src="https://github.com/Mariano-SI/teste-pratico/blob/main/assets/forReadMe/func2.png"></img>
-<img src="https://github.com/Mariano-SI/teste-pratico/blob/main/assets/forReadMe/func22.png"></img>
+<img src="https://github.com/Mariano-SI/teste/blob/main/forReadMe/func2.png"></img>
+<img src="https://github.com/Mariano-SI/teste/blob/main/forReadMe/func22.png"></img>
 <p>Pesquisa por latitude e longitude</p>
-<img src="https://github.com/Mariano-SI/teste-pratico/blob/main/assets/forReadMe/func3.png"></img>
-<img src="https://github.com/Mariano-SI/teste-pratico/blob/main/assets/forReadMe/func4.png"></img>
+<img src="https://github.com/Mariano-SI/teste/blob/main/forReadMe/func3.png"></img>
+<img src="https://github.com/Mariano-SI/teste/blob/main/forReadMe/func4.png"></img>
 <h1>Testes com JEST</h1>
 <p>Para rodar a bateria de testes desenvolvida com jest, no terminal, digite: <strong>npm test</strong>
